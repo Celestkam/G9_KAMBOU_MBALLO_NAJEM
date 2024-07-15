@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Définir le répertoire de travail dans le conteneur
-WORKDIR /app
+WORKDIR /projet3
 
 # Copier le fichier de configuration de l'application
 COPY requirements.txt requirements.txt
@@ -15,6 +15,7 @@ COPY . .
 
 # Exposer le port sur lequel l'application fonctionne
 EXPOSE 8501
+
 
 # Définir la commande par défaut pour exécuter l'application
 CMD ["streamlit", "run", "home.py"]
